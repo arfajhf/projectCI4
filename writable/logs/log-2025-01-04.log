@@ -1,0 +1,832 @@
+CRITICAL - 2025-01-04 12:11:10 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 47.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/WelcomController.php(17): view()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\WelcomController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 15:33:15 --> Error: Call to undefined method CodeIgniter\View\View::extends()
+[Method: GET, Route: dashboard]
+in APPPATH/Views/dashboard.php on line 1.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/Home.php(9): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+ERROR - 2025-01-04 19:12:54 --> mysqli_sql_exception: Failed to open the referenced table 'admin' in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/app/Database/Migrations/2025-01-04-175142_CreateIdentificationCardTable.php(68): CodeIgniter\Database\Forge->createTable()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(866): App\Database\Migrations\CreateIdentificationCardTable->up()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2025-01-04 19:16:13 --> mysqli_sql_exception: Table 'admins' already exists in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/app/Database/Migrations/2025-01-04-174937_CreateAdminTable.php(50): CodeIgniter\Database\Forge->createTable()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(866): App\Database\Migrations\CreateAdminTable->up()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#13 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#15 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#16 {main}
+ERROR - 2025-01-04 19:18:11 --> mysqli_sql_exception: Table 'admins' already exists in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/app/Database/Migrations/2025-01-04-174937_CreateAdminTable.php(50): CodeIgniter\Database\Forge->createTable()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(866): App\Database\Migrations\CreateAdminTable->up()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2025-01-04 19:19:43 --> mysqli_sql_exception: Failed to open the referenced table 'document_categories' in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/app/Database/Migrations/2025-01-04-175301_CreateSubmissionTable.php(49): CodeIgniter\Database\Forge->createTable()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(866): App\Database\Migrations\CreateSubmissionTable->up()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2025-01-04 19:21:34 --> mysqli_sql_exception: Table 'admins' already exists in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/app/Database/Migrations/2025-01-04-174937_CreateAdminTable.php(50): CodeIgniter\Database\Forge->createTable()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(866): App\Database\Migrations\CreateAdminTable->up()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#12 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#13 {main}
+ERROR - 2025-01-04 19:21:48 --> mysqli_sql_exception: Table 'admins' already exists in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/app/Database/Migrations/2025-01-04-174937_CreateAdminTable.php(50): CodeIgniter\Database\Forge->createTable()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(866): App\Database\Migrations\CreateAdminTable->up()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate()
+#7 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/system/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#12 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#13 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#15 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#16 {main}
+ERROR - 2025-01-04 19:25:22 --> mysqli_sql_exception: Duplicate entry '08123456789' for key 'admins.phone' in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/BaseModel.php(959): CodeIgniter\Model->doInsertBatch()
+#7 /home/arfaj/Documents/project/client_pengajuan/app/Database/Seeds/AdminSeeder.php(44): CodeIgniter\BaseModel->insertBatch()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/Database/Seeder.php(147): App\Database\Seeds\AdminSeeder->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/app/Database/Seeds/DatabaseSeeder.php(11): CodeIgniter\Database\Seeder->call()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Database/Seeder.php(147): App\Database\Seeds\DatabaseSeeder->run()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+#12 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Seed->run()
+#13 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#14 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#15 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#16 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#17 {main}
+DEBUG - 2025-01-04 20:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 20:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 21:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 21:37:32 --> BadMethodCallException: Call to undefined method App\Models\AdminModel::getAllUsers
+[Method: GET, Route: admin]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/AdminController.php(14): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:39:06 --> BadMethodCallException: Call to undefined method App\Models\AdminModel::geetAllUsers
+[Method: GET, Route: admin]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/AdminController.php(14): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:39:09 --> BadMethodCallException: Call to undefined method App\Models\AdminModel::geetAllUsers
+[Method: GET, Route: admin]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/AdminController.php(14): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:39:09 --> BadMethodCallException: Call to undefined method App\Models\AdminModel::geetAllUsers
+[Method: GET, Route: admin]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/AdminController.php(14): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:39:29 --> ErrorException: Undefined variable $users
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 27.
+ 1 APPPATH/Views/admin/user/index.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:39:46 --> ErrorException: Undefined variable $users
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 27.
+ 1 APPPATH/Views/admin/user/index.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:39:53 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 30.
+ 1 APPPATH/Views/admin/user/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:40:52 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 30.
+ 1 APPPATH/Views/admin/user/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:42:45 --> BadMethodCallException: Call to undefined method App\Models\AdminModel::getAll
+[Method: GET, Route: admin]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/AdminController.php(14): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:43:05 --> Error: Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 30.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/AdminController.php(16): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:44:30 --> BadMethodCallException: Call to undefined method App\Models\AdminModel::getAllAdmins
+[Method: GET, Route: admin]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/AdminController.php(14): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:46:47 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 30.
+ 1 APPPATH/Views/admin/user/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:47:02 --> ErrorException: Undefined variable $data
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 27.
+ 1 APPPATH/Views/admin/user/index.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 21:47:25 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 30.
+ 1 APPPATH/Views/admin/user/index.php(30): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(16): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 22:04:11 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 50.
+ 1 APPPATH/Views/admin/user/index.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(25): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 22:04:29 --> Error: Call to a member function links() on array
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 50.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/AdminController.php(25): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 22:04:45 --> Error: Call to a member function links() on array
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 50.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/AdminController.php(25): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 22:05:30 --> Error: Cannot use object of type CodeIgniter\Pager\Pager as array
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 32.
+ 1 SYSTEMPATH/View/View.php(234): include()
+ 2 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/AdminController.php(27): view()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 22:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 22:19:59 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin]
+in APPPATH/Views/layout/head.php on line 64.
+ 1 APPPATH/Views/layout/head.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/layout/head.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(250): CodeIgniter\View\View->render()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/AdminController.php(29): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 22:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 22:21:57 --> ErrorException: compact(): Undefined variable $name
+[Method: GET, Route: admin]
+in APPPATH/Controllers/AdminController.php on line 29.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/AdminController.php(29): compact()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 22:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 22:25:24 --> ErrorException: Undefined variable $name
+[Method: GET, Route: admin]
+in APPPATH/Views/layout/head.php on line 64.
+ 1 APPPATH/Views/layout/head.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/layout/head.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(250): CodeIgniter\View\View->render()
+ 5 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/AdminController.php(29): view()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 22:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 22:29:51 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 32.
+ 1 APPPATH/Views/admin/user/index.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 22:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 22:29:55 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: admin]
+in APPPATH/Views/admin/user/index.php on line 32.
+ 1 APPPATH/Views/admin/user/index.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/user/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(29): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 22:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 22:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 23:13:16 --> ErrorException: Attempt to read property "admin_id" on array
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 50.
+ 1 APPPATH/Controllers/AdminController.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:16:17 --> ErrorException: Attempt to read property "admin_id" on array
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 50.
+ 1 APPPATH/Controllers/AdminController.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:16:34 --> ErrorException: Attempt to read property "admin_id" on array
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 50.
+ 1 APPPATH/Controllers/AdminController.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:18:46 --> ErrorException: Attempt to read property "admin_id" on array
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 52.
+ 1 APPPATH/Controllers/AdminController.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:19:10 --> ErrorException: Undefined array key "admin_id"
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 52.
+ 1 APPPATH/Controllers/AdminController.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:20:26 --> ErrorException: Undefined array key "admin_id"
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 52.
+ 1 APPPATH/Controllers/AdminController.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:22:58 --> ErrorException: Undefined array key "admin_id"
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 50.
+ 1 APPPATH/Controllers/AdminController.php(50): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:23:58 --> ArgumentCountError: Too few arguments to function App\Controllers\AdminController::penduduk(), 0 passed in /home/arfaj/Documents/project/client_pengajuan/system/CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 26.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:24:44 --> ErrorException: Undefined array key "admin_id"
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 51.
+ 1 APPPATH/Controllers/AdminController.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:24:52 --> ErrorException: Undefined array key "admin_id"
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 51.
+ 1 APPPATH/Controllers/AdminController.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 23:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 23:26:35 --> TypeError: Cannot access offset of type array on array
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 52.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 23:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 23:29:44 --> TypeError: Cannot access offset of type array on array
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 52.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:30:24 --> ErrorException: Undefined array key "admin_id"
+[Method: GET, Route: penduduk]
+in APPPATH/Controllers/AdminController.php on line 51.
+ 1 APPPATH/Controllers/AdminController.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 23:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-04 23:46:33 --> ErrorException: Undefined array key "admin_name"
+[Method: GET, Route: penduduk]
+in APPPATH/Views/admin/penduduk/index.php on line 34.
+ 1 APPPATH/Views/admin/penduduk/index.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/penduduk/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:48:08 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /home/arfaj/Documents/project/client_pengajuan/system/Model.php on line 928
+[Method: GET, Route: penduduk]
+in SYSTEMPATH/Database/BaseBuilder.php on line 398.
+ 1 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->select()
+ 2 APPPATH/Models/IdentificationCardModel.php(49): CodeIgniter\Model->__call()
+ 3 APPPATH/Controllers/AdminController.php(43): App\Models\IdentificationCardModel->getAdmin()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:49:53 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /home/arfaj/Documents/project/client_pengajuan/system/Model.php on line 928
+[Method: GET, Route: penduduk]
+in SYSTEMPATH/Database/BaseBuilder.php on line 398.
+ 1 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->select()
+ 2 APPPATH/Models/IdentificationCardModel.php(49): CodeIgniter\Model->__call()
+ 3 APPPATH/Controllers/AdminController.php(43): App\Models\IdentificationCardModel->getAdmin()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:50:45 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /home/arfaj/Documents/project/client_pengajuan/system/Model.php on line 928
+[Method: GET, Route: penduduk]
+in SYSTEMPATH/Database/BaseBuilder.php on line 398.
+ 1 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->select()
+ 2 APPPATH/Models/IdentificationCardModel.php(49): CodeIgniter\Model->__call()
+ 3 APPPATH/Controllers/AdminController.php(43): App\Models\IdentificationCardModel->getAdmin()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:51:26 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in /home/arfaj/Documents/project/client_pengajuan/system/Model.php on line 928
+[Method: GET, Route: penduduk]
+in SYSTEMPATH/Database/BaseBuilder.php on line 398.
+ 1 SYSTEMPATH/Model.php(928): CodeIgniter\Database\BaseBuilder->select()
+ 2 APPPATH/Models/IdentificationCardModel.php(49): CodeIgniter\Model->__call()
+ 3 APPPATH/Controllers/AdminController.php(43): App\Models\IdentificationCardModel->getAdmin()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+CRITICAL - 2025-01-04 23:55:06 --> ErrorException: Undefined array key "admin_name"
+[Method: GET, Route: penduduk]
+in APPPATH/Views/admin/penduduk/index.php on line 34.
+ 1 APPPATH/Views/admin/penduduk/index.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(234): include('/home/arfaj/Documents/project/client_pengajuan/app/Views/admin/penduduk/index.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/AdminController.php(47): view()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/arfaj/Documents/project/client_pengajuan/public/index.php')
+DEBUG - 2025-01-04 23:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-04 23:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-04 23:58:31 --> mysqli_sql_exception: Unknown column 'indentity_number' in 'field list' in /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /home/arfaj/Documents/project/client_pengajuan/system/Database/MySQLi/Connection.php(312): mysqli->query()
+#1 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query()
+#4 /home/arfaj/Documents/project/client_pengajuan/system/Database/BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute()
+#5 /home/arfaj/Documents/project/client_pengajuan/system/Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch()
+#6 /home/arfaj/Documents/project/client_pengajuan/system/BaseModel.php(959): CodeIgniter\Model->doInsertBatch()
+#7 /home/arfaj/Documents/project/client_pengajuan/app/Database/Seeds/IdentificationCardSeeder.php(29): CodeIgniter\BaseModel->insertBatch()
+#8 /home/arfaj/Documents/project/client_pengajuan/system/Database/Seeder.php(147): App\Database\Seeds\IdentificationCardSeeder->run()
+#9 /home/arfaj/Documents/project/client_pengajuan/app/Database/Seeds/DatabaseSeeder.php(11): CodeIgniter\Database\Seeder->call()
+#10 /home/arfaj/Documents/project/client_pengajuan/system/Database/Seeder.php(147): App\Database\Seeds\DatabaseSeeder->run()
+#11 /home/arfaj/Documents/project/client_pengajuan/system/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+#12 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Seed->run()
+#13 /home/arfaj/Documents/project/client_pengajuan/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run()
+#14 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#15 /home/arfaj/Documents/project/client_pengajuan/system/Boot.php(104): CodeIgniter\Boot::runCommand()
+#16 /home/arfaj/Documents/project/client_pengajuan/spark(84): CodeIgniter\Boot::bootSpark()
+#17 {main}
+DEBUG - 2025-01-04 23:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
