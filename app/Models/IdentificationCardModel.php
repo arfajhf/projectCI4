@@ -47,8 +47,29 @@ class IdentificationCardModel extends Model
     public function getAdmin()
     {
         return $this->table('identificationcards')
-        // ->select('identificationcards.*', 'admins.name')
+            // ->select('identificationcards.*', 'admins.name')
             ->join('admins', 'admins.id = identificationcards.admin_id')
             ->findAll();
+    }
+
+    public function getAllIDCardsWithAdmins()
+    {
+        $query = $this->db->table('identificationcards')
+            ->select('identificationcards.*, admins.name, admins.email, admins.phone')
+            ->join('admins', 'admins.id = identificationcards.admin_id', 'left')
+            ->where('admins.role', 'penduduk') // Opsional
+            ->get();
+
+        $result = $query->getResultArray();
+
+        return !empty($result) ? $result : []; // Pastikan selalu return array
+    }
+
+    public function getIDCardWithAdmin($id)
+    {
+        return $this->select('identificationcards.*, admins.name, admins.email, admins.phone')
+            ->join('admins', 'admins.id = identificationcards.admin_id')
+            ->where('identificationcards.id', $id)
+            ->first();
     }
 }

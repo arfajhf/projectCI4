@@ -11,7 +11,7 @@ class IdentificationCardSeeder extends Seeder
         $identificationCardModel = new \App\Models\IdentificationCardModel();
         $data = [
             [
-                'admin_id' => 9,
+                'admin_id' => 3,
                 'place_of_birth' => 'Bandung',
                 'date_of_birth' => '2000-01-01',
                 'addres' => 'Bandung',

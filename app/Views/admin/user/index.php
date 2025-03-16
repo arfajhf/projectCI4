@@ -7,7 +7,7 @@
         <div class="card-body">
             <h5 class="card-title">Data Pengguna</h5>
 
-            <a href="/admin/penduduk/create" class="btn btn-success">Tambah FO</a>
+            <a href="/admin/create" class="btn btn-success">Tambah FO</a>
 
             <div class="responsive-table">
                 <table class="table table-borderless datatable">
@@ -36,13 +36,17 @@
                                     <td><?= esc($user['phone']) ?></td>
                                     <td><?= esc($user['role']) ?></td>
                                     <td class="text-center">
-                                        <a href="/admin/penduduk/delete/<?= esc($user['id']) ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')"
-                                            <?php if ($user['role'] == 'admin') : ?>
-                                            hidden  
-                                            <?php endif; ?>>
-                                            Hapus
-                                        </a>
-                                        <a href="/admin/penduduk/detail/<?= esc($user['id']) ?>" class="btn btn-info" disabled>Detail</a>
+
+                                        <form action="/admin/delete/<?= $user['id'] ?>" method="post"
+                                            class="form-basic d-inline">
+                                            <?= csrf_field(); ?>
+                                            <button type="submit" class="btn btn-danger"
+                                                onclick="return confirm('Apa anda yakin ingin menghapus data ini?')"
+                                                <?php if ($user['role'] == 'admin') : ?>
+                                                hidden
+                                                <?php endif; ?>>Hapus</button>
+                                        </form>
+                                        <!-- <a href="/admin/view" class="btn btn-info" disabled>Detail</a> -->
                                     </td>
                                 </tr>
 

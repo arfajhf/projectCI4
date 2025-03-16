@@ -159,6 +159,9 @@ class App extends BaseConfig
      */
     public bool $forceGlobalSecureRequests = false;
 
+
+    // session
+    // public $sessionSavePath = sys_get_temp_dir();
     /**
      * --------------------------------------------------------------------------
      * Reverse Proxy IPs

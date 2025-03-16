@@ -26,26 +26,26 @@
                     ?>
 
                     <tbody>
-                        <?php if (!empty($data)) : ?>
-                            <?php foreach ($data as $user) : ?>
+                        <?php if (!empty($identificationcards)) : ?>
+                            <?php $no = 1;
+                            foreach ($identificationcards as $user) : ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
-                                    <td><?= esc($user['identity_number']) ?></td>
+                                    <td><?= esc($user['identity_number']) ?></td> <!-- Pakai [''] -->
                                     <td><?= esc($user['name']) ?></td>
                                     <td><?= esc($user['email']) ?></td>
-                                    <td><?= esc($user['phone']) ?></td>   
+                                    <td><?= esc($user['phone']) ?></td>
                                     <td class="text-center">
-                                        <a href="/admin/penduduk/delete/<?= esc($user['id']) ?>" class="btn btn-danger">Hapus</a>
-                                        <a href="/admin/penduduk/detail/<?= esc($user['id']) ?>" class="btn btn-info">Detail</a>
+                                        <!-- <a href="/admin/penduduk/delete/" class="btn btn-danger">Hapus</a> -->
+                                        <a href="/penduduk/view/<?= esc($user['id']) ?>" class="btn btn-info">Detail</a>
                                     </td>
                                 </tr>
-
                             <?php endforeach; ?>
                         <?php else : ?>
                             <tr>
-                                <td colspan="5" class="text-center"><span>Data Tidak Ditemukan</span></td>
+                                <td colspan="6" class="text-center"><span>Data Tidak Ditemukan</span></td>
                             </tr>
-                        <?php endif;  ?>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>

@@ -22,6 +22,7 @@ class Session extends BaseConfig
      * @var class-string<BaseHandler>
      */
     public string $driver = FileHandler::class;
+    // public $driver = 'File';
 
     /**
      * --------------------------------------------------------------------------
@@ -57,7 +58,15 @@ class Session extends BaseConfig
      *
      * IMPORTANT: You are REQUIRED to set a valid save path!
      */
-    public string $savePath = WRITEPATH . 'session';
+    // public string $savePath = WRITEPATH . 'session';
+    // public $savePath = sys_get_temp_dir();
+    public $savePath;
+
+    public function __construct()
+    {
+        $this->savePath = sys_get_temp_dir();
+    }
+
 
     /**
      * --------------------------------------------------------------------------

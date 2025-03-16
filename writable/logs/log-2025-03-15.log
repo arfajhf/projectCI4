@@ -1,0 +1,682 @@
+DEBUG - 2025-03-15 12:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 12:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 13:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 13:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 15:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 15:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 15:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 15:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-15 16:27:58 --> mysqli_sql_exception: Column 'name' cannot be null in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ad...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 A:\project\projectCI4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 A:\project\projectCI4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 A:\project\projectCI4\app\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert(Array)
+#8 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+#9 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+#10 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#15 {main}
+CRITICAL - 2025-03-15 16:27:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+[Method: POST, Route: regis]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (:name:, :email:, :phone:, :role:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:27:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (NULL, \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$DyW1RCzH/hdMIxs.CgoXZOMU/asQ5KKiT9AyyxTSdjPj.VPgcUB9e\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (NULL, \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$DyW1RCzH/hdMIxs.CgoXZOMU/asQ5KKiT9AyyxTSdjPj.VPgcUB9e\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (:name:, :email:, :phone:, :role:, :password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:27:59 --> [Caused by] mysqli_sql_exception: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (NULL, \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$DyW1RCzH/hdMIxs.CgoXZOMU/asQ5KKiT9AyyxTSdjPj.VPgcUB9e\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (NULL, \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$DyW1RCzH/hdMIxs.CgoXZOMU/asQ5KKiT9AyyxTSdjPj.VPgcUB9e\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (NULL, \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$DyW1RCzH/hdMIxs.CgoXZOMU/asQ5KKiT9AyyxTSdjPj.VPgcUB9e\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (:name:, :email:, :phone:, :role:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:28:26 --> Error: Object of class App\Models\AdminModel could not be converted to string
+[Method: POST, Route: regis]
+in APPPATH\Controllers\Auth\Auth.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+ERROR - 2025-03-15 16:29:09 --> mysqli_sql_exception: Duplicate entry '085157796954' for key 'phone' in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ad...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ad...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ad...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ad...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 A:\project\projectCI4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 A:\project\projectCI4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 A:\project\projectCI4\app\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert(Array)
+#8 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+#9 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+#10 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#15 {main}
+CRITICAL - 2025-03-15 16:29:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '085157796954' for key 'phone'
+[Method: POST, Route: regis]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (:name:, :email:, :phone:, :role:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:29:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '085157796954' for key 'phone'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (\'Araina Putri Jayawardana\', \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$eh8u7FlUFvb3dRhwxC.Zc.UVYFyxfeR3tVxKRmrCijWWyR0qJ1hCy\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (\'Araina Putri Jayawardana\', \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$eh8u7FlUFvb3dRhwxC.Zc.UVYFyxfeR3tVxKRmrCijWWyR0qJ1hCy\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (:name:, :email:, :phone:, :role:, :password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:29:09 --> [Caused by] mysqli_sql_exception: Duplicate entry '085157796954' for key 'phone'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (\'Araina Putri Jayawardana\', \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$eh8u7FlUFvb3dRhwxC.Zc.UVYFyxfeR3tVxKRmrCijWWyR0qJ1hCy\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (\'Araina Putri Jayawardana\', \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$eh8u7FlUFvb3dRhwxC.Zc.UVYFyxfeR3tVxKRmrCijWWyR0qJ1hCy\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (\'Araina Putri Jayawardana\', \'araina@gmail.com\', \'085157796954\', \'penduduk\', \'$2y$10$eh8u7FlUFvb3dRhwxC.Zc.UVYFyxfeR3tVxKRmrCijWWyR0qJ1hCy\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `admins` (`name`, `email`, `phone`, `role`, `password`) VALUES (:name:, :email:, :phone:, :role:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth\Auth.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:30:14 --> Error: Object of class App\Models\AdminModel could not be converted to string
+[Method: POST, Route: regis]
+in APPPATH\Controllers\Auth\Auth.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+ERROR - 2025-03-15 16:30:53 --> mysqli_sql_exception: Column 'place_of_birth' cannot be null in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `id...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `id...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `id...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `id...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 A:\project\projectCI4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 A:\project\projectCI4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 A:\project\projectCI4\app\Controllers\Auth\Auth.php(79): CodeIgniter\Model->insert(Array)
+#8 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+#9 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+#10 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#15 {main}
+CRITICAL - 2025-03-15 16:30:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'place_of_birth' cannot be null
+[Method: POST, Route: regis]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (:admin_id:, :identity_number:, :place_of_birth:, :date_of_birth:, :religion:, :marital_status:, :job:, :nationality:, :blood_type:, :addres:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Auth\Auth.php(79): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:30:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'place_of_birth' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (7, \'2100281127381233\', NULL, NULL, \'Islam\', NULL, \'ssssssssss\', NULL, NULL, \'sdsdsdsdsdddddddddddddddddddddddd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (7, \'2100281127381233\', NULL, NULL, \'Islam\', NULL, \'ssssssssss\', NULL, NULL, \'sdsdsdsdsdddddddddddddddddddddddd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (:admin_id:, :identity_number:, :place_of_birth:, :date_of_birth:, :religion:, :marital_status:, :job:, :nationality:, :blood_type:, :addres:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Auth\Auth.php(79): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 16:30:53 --> [Caused by] mysqli_sql_exception: Column 'place_of_birth' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (7, \'2100281127381233\', NULL, NULL, \'Islam\', NULL, \'ssssssssss\', NULL, NULL, \'sdsdsdsdsdddddddddddddddddddddddd\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (7, \'2100281127381233\', NULL, NULL, \'Islam\', NULL, \'ssssssssss\', NULL, NULL, \'sdsdsdsdsdddddddddddddddddddddddd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (7, \'2100281127381233\', NULL, NULL, \'Islam\', NULL, \'ssssssssss\', NULL, NULL, \'sdsdsdsdsdddddddddddddddddddddddd\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `identificationcards` (`admin_id`, `identity_number`, `place_of_birth`, `date_of_birth`, `religion`, `marital_status`, `job`, `nationality`, `blood_type`, `addres`) VALUES (:admin_id:, :identity_number:, :place_of_birth:, :date_of_birth:, :religion:, :marital_status:, :job:, :nationality:, :blood_type:, :addres:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth\Auth.php(79): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth\Auth->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth\Auth))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-15 16:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 16:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 16:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-15 17:43:15 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 33.
+ 1 APPPATH\Views\admin\penduduk\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:45:16 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 33.
+ 1 APPPATH\Views\admin\penduduk\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-15 17:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 17:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-15 17:55:08 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:55:18 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:56:20 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:56:22 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:56:24 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:57:12 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:57:14 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(45): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:58:45 --> ErrorException: compact(): Undefined variable $data
+[Method: GET, Route: penduduk]
+in APPPATH\Controllers\AdminController.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $data', 'A:\\project\\projectCI4\\app\\Controllers\\AdminController.php', 46)
+ 2 APPPATH\Controllers\AdminController.php(46): compact('data')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:59:03 --> ErrorException: Attempt to read property "identity_number" on null
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on null', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(46): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:59:45 --> ErrorException: Attempt to read property "identity_number" on null
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on null', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(46): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 17:59:47 --> ErrorException: Attempt to read property "identity_number" on null
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on null', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(46): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:00:32 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:00:34 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:01:15 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:01:17 --> ErrorException: Attempt to read property "identity_number" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "identity_number" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:01:56 --> ErrorException: Attempt to read property "name" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 35.
+ 1 APPPATH\Views\admin\penduduk\index.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:07:06 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:09:29 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:10:17 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:11:19 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:11:22 --> ErrorException: Undefined array key "identity_number"
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "identity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(50): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:15:53 --> ErrorException: compact(): Undefined variable $data
+[Method: GET, Route: penduduk]
+in APPPATH\Controllers\AdminController.php on line 54.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $data', 'A:\\project\\projectCI4\\app\\Controllers\\AdminController.php', 54)
+ 2 APPPATH\Controllers\AdminController.php(54): compact('data')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-15 18:16:06 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 39.
+ 1 APPPATH\Views\admin\penduduk\index.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 39)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(54): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-15 18:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-15 18:17:48 --> ParseError: syntax error, unexpected variable "$data"
+[Method: GET, Route: penduduk]
+in APPPATH\Controllers\AdminController.php on line 47.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('A:\\project\\projectCI4\\app\\Controllers\\AdminController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\AdminController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-15 18:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-15 18:33:13 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: penduduk]
+in APPPATH\Views\admin\penduduk\index.php on line 34.
+ 1 APPPATH\Views\admin\penduduk\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/penduduk/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(54): view('admin/penduduk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-15 18:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-15 18:47:25 --> ErrorException: Undefined variable $identificationcards
+[Method: GET, Route: penduduk]
+in APPPATH\Controllers\AdminController.php on line 48.
+ 1 APPPATH\Controllers\AdminController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $identificationcards', 'A:\\project\\projectCI4\\app\\Controllers\\AdminController.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->penduduk()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-15 18:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-15 18:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

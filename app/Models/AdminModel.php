@@ -54,4 +54,32 @@ class AdminModel extends Model
         }
         return $data;
     }
+
+    public function getAdminWithIDCard($adminId)
+    {
+        return $this->db->table('admins')
+            ->select('admins.*, identificationcards.*')
+            ->join('identificationcards', 'identificationcards.admin_id = admins.id')
+            ->where('admins.id', $adminId)
+            ->get()
+            ->getRow();
+    }
+    public function getAllAdminsWithIDCards()
+    {
+        return $this->db->table('admins')
+            ->select('admins.id, admins.name, admins.email, admins.phone, identificationcards.identity_number')
+            ->join('identificationcards', 'identificationcards.admin_id = admins.id', 'left') // Pakai LEFT JOIN biar tetap dapat semua admin walau tanpa kartu identitas
+            ->where('admins.role', 'penduduk')
+            ->get()
+            ->getResultArray(); // Gunakan array agar lebih mudah diakses di View
+    }
+    public function searchAdminsByIdentity($identityNumber)
+    {
+        return $this->db->table('admins')
+            ->select('admins.*, identificationcards.identity_number, identificationcards.place_of_birth, identificationcards.date_of_birth, identificationcards.religion, identificationcards.marital_status, identificationcards.job, identificationcards.nationality, identificationcards.blood_type')
+            ->join('identificationcards', 'identificationcards.admin_id = admins.id', 'left')
+            ->like('identificationcards.identity_number', $identityNumber)
+            ->get()
+            ->getResult(); // Hasilnya tetap array of objects
+    }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - FlexStart Bootstrap Template</title>
+    <title>DisdukCapil</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -52,6 +52,7 @@
                     <li><a href="#home" class="active">Home<br></a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#layanan">Kuesioner</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

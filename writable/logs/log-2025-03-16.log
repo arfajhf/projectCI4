@@ -1,0 +1,327 @@
+DEBUG - 2025-03-16 18:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-16 18:22:20 --> mysqli_sql_exception: Unknown table 'disdukcapil.identification_cards' in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `identif...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `identif...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `identif...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identif...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 A:\project\projectCI4\app\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+#7 A:\project\projectCI4\app\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+#8 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+#9 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#15 {main}
+CRITICAL - 2025-03-16 18:22:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'disdukcapil.identification_cards'
+[Method: GET, Route: penduduk/view/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = :identification_cards.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-16 18:22:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'disdukcapil.identification_cards'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = :identification_cards.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-16 18:22:20 --> [Caused by] mysqli_sql_exception: Unknown table 'disdukcapil.identification_cards'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identification_cards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = :identification_cards.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+ERROR - 2025-03-16 18:22:53 --> mysqli_sql_exception: Unknown column 'identification_cards.id' in 'WHERE' in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `identif...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `identif...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `identif...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identif...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 A:\project\projectCI4\app\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+#7 A:\project\projectCI4\app\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+#8 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+#9 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#15 {main}
+CRITICAL - 2025-03-16 18:22:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identification_cards.id' in 'WHERE'
+[Method: GET, Route: penduduk/view/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = :identification_cards.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-16 18:22:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identification_cards.id' in 'WHERE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = :identification_cards.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-16 18:22:53 --> [Caused by] mysqli_sql_exception: Unknown column 'identification_cards.id' in 'WHERE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `identificationcards`.*, `admins`.`name`, `admins`.`email`, `admins`.`phone`
+FROM `identificationcards`
+JOIN `admins` ON `admins`.`id` = `identification_cards`.`admin_id`
+WHERE `identification_cards`.`id` = :identification_cards.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\IdentificationCardModel.php(73): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\AdminController.php(47): App\Models\IdentificationCardModel->getIDCardWithAdmin('1')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-16 18:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-16 18:49:51 --> ErrorException: Undefined array key "indentity_card"
+[Method: GET, Route: penduduk/view/1]
+in APPPATH\Views\admin\penduduk\view.php on line 84.
+ 1 APPPATH\Views\admin\penduduk\view.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "indentity_card"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\view.php', 84)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/admin/penduduk/view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(54): view('/admin/penduduk/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-16 18:50:04 --> ErrorException: Undefined array key "indentity_number"
+[Method: GET, Route: penduduk/view/1]
+in APPPATH\Views\admin\penduduk\view.php on line 84.
+ 1 APPPATH\Views\admin\penduduk\view.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "indentity_number"', 'A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\view.php', 84)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/admin/penduduk/view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(54): view('/admin/penduduk/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-16 18:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-16 18:53:42 --> InvalidArgumentException: Invalid escape context provided.
+[Method: GET, Route: penduduk/view/1]
+in SYSTEMPATH\Common.php on line 434.
+ 1 APPPATH\Views\admin\penduduk\view.php(52): esc('cina', '2014-06-11')
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\penduduk\\view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/admin/penduduk/view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(54): view('/admin/penduduk/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->viewPenduduk('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-16 18:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 18:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-16 19:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-16 19:50:14 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: kategori]
+in APPPATH\Views\admin\kategori\index.php on line 33.
+ 1 APPPATH\Views\admin\kategori\index.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'A:\\project\\projectCI4\\app\\Views\\admin\\kategori\\index.php', 33)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\admin\\kategori\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/kategori/index', [], true)
+ 5 APPPATH\Controllers\KategoriController.php(15): view('admin/kategori/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KategoriController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KategoriController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-16 19:51:06 --> BadMethodCallException: Call to undefined method App\Models\DocumentCategorieModel::all
+[Method: GET, Route: kategori]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\KategoriController.php(14): CodeIgniter\Model->__call('all', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KategoriController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KategoriController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-16 19:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

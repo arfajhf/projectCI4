@@ -144,6 +144,13 @@
                     <i class="bi bi-person"></i>
                     <span>Penduduk</span>
                 </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/kategori">
+                    <i class="bi bi-bookmarks-fill"></i>
+                    <span>Kategori</span>
+                </a>
             </li><!-- End Profile Page Nav -->
 
 

@@ -65,7 +65,7 @@ class CreateIdentificationCardTable extends Migration
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('admin_id', 'admins', 'id', 'CASCADE', 'CASCADE');
-        $this->forge->createTable('identificationcards');    
+        $this->forge->createTable('identificationcards');
     }
 
     public function down()
