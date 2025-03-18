@@ -12,7 +12,7 @@ class DocumentCategorieModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'category', 'requiments', 'created_at', 'updated_at'];
+    protected $allowedFields    = ['name', 'category', 'requirements', 'created_at', 'updated_at'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -43,4 +43,9 @@ class DocumentCategorieModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getAll()
+    {
+        return $this->findAll();
+    }
 }

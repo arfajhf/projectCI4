@@ -28,11 +28,14 @@ $routes->group('/', function ($routes) {
         $routes->post('/admin/store', 'AdminController::storeFo');
         $routes->post('/admin/delete/(:num)', 'AdminController::deleteFo/$1');
         $routes->get('/admin/view/(:num)', 'AdminController::view/$1');
+
         // penduduk
         $routes->get('/penduduk', 'AdminController::penduduk');
         $routes->get('/penduduk/view/(:num)', 'AdminController::viewPenduduk/$1');
 
         // kategori
         $routes->get('/kategori', 'KategoriController::index');
+        $routes->get('/kategori/create', 'KategoriController::create');
+        $routes->post('/kategori/store', 'KategoriController::store');
     });
 });

@@ -5,7 +5,9 @@
     <div class="card recent-sales overflow-auto">
 
         <div class="card-body">
-            <h5 class="card-title">Data Penduduk</h5>
+            <h5 class="card-title">Data Kategori</h5>
+
+            <a href="/kategori/create" class="btn btn-outline-primary">Tambah Kategori</a>
 
             <div class="responsive-table">
                 <table class="table table-borderless datatable">
@@ -25,24 +27,27 @@
                     ?>
 
                     <tbody>
-                        <?php if (!empty($data)) : ?>
-                            <?php $no = 1;
-                            foreach ($data as $datas) : ?>
-                                <tr>
-                                    <td><?= $no++ ?></td>
-                                    <td><?= esc($datas['name']) ?></td>
-                                    <td><?= esc($datas['category']) ?></td> <!-- Pakai [''] -->
-                                    <td><?= esc($datas['requirement']) ?></td>
-                                    <td class="text-center">
-                                        <a href="/kategori/delete/<?= esc($datas['id']) ?>" class="btn btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <?php else : ?>
+                        <?php $no = 1;
+                        foreach ($documents as $document): ?>
                             <tr>
-                                <td colspan="6" class="text-center"><span>Data Tidak Ditemukan</span></td>
+                                <td><?= $no++ ?></td>
+                                <td><?= esc($document['name']) ?></td>
+                                <td><?= esc($document['category']) ?></td>
+                                <td>
+                                    <?php
+                                    $requirements = json_decode($document['requirements'], true);
+                                    if (!empty($requirements)): ?>
+                                        <ul>
+                                            <?php foreach ($requirements as $req): ?>
+                                                <li><?= esc($req) ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php else: ?>
+                                        <span class="text-muted">Tidak ada persyaratan</span>
+                                    <?php endif; ?>
+                                </td>
                             </tr>
-                        <?php endif; ?>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
