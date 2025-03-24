@@ -1,0 +1,740 @@
+DEBUG - 2025-03-23 00:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 00:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 00:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 00:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 02:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-23 02:59:45 --> mysqli_sql_exception: Table 'disdukcapil.admin' doesn't exist in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\PengajuanController.php(23): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-03-23 02:59:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'disdukcapil.admin' doesn't exist
+[Method: GET, Route: penduduk/pengajuan/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = :status:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PengajuanController.php(23): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 02:59:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'disdukcapil.admin' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = :status:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PengajuanController.php(23): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 02:59:45 --> [Caused by] mysqli_sql_exception: Table 'disdukcapil.admin' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`category` as `document_category`, `admin`.`name` as `admin_name`, `admin`.`email` as `admin_email`, `admin`.`phone` as `admin_phone`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admin` ON `admin`.`id` = `submissions`.`admin_id`
+WHERE `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PengajuanController.php(23): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 03:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-23 03:00:39 --> ErrorException: Undefined array key "requirements"
+[Method: GET, Route: pengajuan/view/1]
+in APPPATH\Controllers\PengajuanController.php on line 108.
+ 1 APPPATH\Controllers\PengajuanController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "requirements"', 'A:\\project\\projectCI4\\app\\Controllers\\PengajuanController.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 03:02:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "penduduk/pengajuan/detail.php"
+[Method: GET, Route: pengajuan/view/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penduduk/pengajuan/detail.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penduduk/pengajuan/detail', [], true)
+ 3 APPPATH\Controllers\PengajuanController.php(112): view('penduduk/pengajuan/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 03:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 03:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-23 15:07:29 --> mysqli_sql_exception: Unknown column 'documentcategories.queue =' in 'SELECT' in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 A:\project\projectCI4\app\Controllers\PengajuanController.php(100): CodeIgniter\BaseModel->first()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-03-23 15:07:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'documentcategories.queue =' in 'SELECT'
+[Method: GET, Route: pengajuan/view/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = :submissions.id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\PengajuanController.php(100): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 15:07:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'documentcategories.queue =' in 'SELECT'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = :submissions.id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\PengajuanController.php(100): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 15:07:29 --> [Caused by] mysqli_sql_exception: Unknown column 'documentcategories.queue =' in 'SELECT'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `documentcategories`.`queue =` `ducument_queue`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submissions`.`id` = :submissions.id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\PengajuanController.php(100): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 15:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-23 15:47:05 --> ErrorException: Undefined variable $pengaju
+[Method: GET, Route: pengajuan/view/1]
+in APPPATH\Views\penduduk\pengajuan\view.php on line 100.
+ 1 APPPATH\Views\penduduk\pengajuan\view.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaju', 'A:\\project\\projectCI4\\app\\Views\\penduduk\\pengajuan\\view.php', 100)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\penduduk\\pengajuan\\view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('penduduk/pengajuan/view', [], true)
+ 5 APPPATH\Controllers\PengajuanController.php(107): view('penduduk/pengajuan/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->view('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 15:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 15:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-23 21:25:46 --> mysqli_sql_exception: Column 'admin_id' in WHERE is ambiguous in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-03-23 21:25:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'admin_id' in WHERE is ambiguous
+[Method: GET, Route: penduduk/pengajuan/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 21:25:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'admin_id' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 21:25:46 --> [Caused by] mysqli_sql_exception: Column 'admin_id' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 21:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-23 21:31:08 --> mysqli_sql_exception: Unknown column 'identificationcards.admin_id =' in 'SELECT' in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-03-23 21:31:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identificationcards.admin_id =' in 'SELECT'
+[Method: GET, Route: penduduk/pengajuan/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 21:31:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identificationcards.admin_id =' in 'SELECT'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 21:31:08 --> [Caused by] mysqli_sql_exception: Unknown column 'identificationcards.admin_id =' in 'SELECT'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id =` `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 21:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-23 21:31:35 --> mysqli_sql_exception: Column 'admin_id' in WHERE is ambiguous in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-03-23 21:31:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'admin_id' in WHERE is ambiguous
+[Method: GET, Route: penduduk/pengajuan/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 21:31:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'admin_id' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-23 21:31:35 --> [Caused by] mysqli_sql_exception: Column 'admin_id' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = \'process\'
+AND `admin_id` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `status` = :status:
+AND `admin_id` = :admin_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PengajuanController.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengajuanController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengajuanController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-03-23 21:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-03-23 21:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

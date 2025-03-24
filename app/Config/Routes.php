@@ -38,4 +38,19 @@ $routes->group('/', function ($routes) {
         $routes->get('/kategori/create', 'KategoriController::create');
         $routes->post('/kategori/store', 'KategoriController::store');
     });
+
+    // FO
+    $routes->group('/', function($routes){
+        $routes->get('/pengajuan/view/(:num)', 'PengajuanController::view/$1');
+        $routes->post('/pengajuan/accept/(:num)', 'PengajuanController::update/$1');
+    });
+
+    $routes->group('/', function($routes){
+        $routes->get('penduduk/pengajuan/accepte', 'PengajuanController::index');
+        $routes->get('penduduk/pengajuan/process', 'PengajuanController::index');
+        $routes->get('penduduk/pengajuan/completed', 'PengajuanController::index');
+        $routes->get('penduduk/pengajuan/create', 'PengajuanController::create');
+        $routes->post('penduduk/pengajuan/store', 'PengajuanController::store');
+        $routes->post('penduduk/pengajuan/get-requirements', 'PengajuanController::getRequirements');
+    });
 });

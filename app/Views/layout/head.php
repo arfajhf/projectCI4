@@ -131,39 +131,62 @@
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
+            <?php
+            if (session()->get('role') == 'admin'):
+            ?>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="/admin">
+                        <i class="bi bi-person"></i>
+                        <span>Pengguna</span>
+                    </a>
+                </li><!-- End Profile Page Nav -->
+            <?php
+            endif;
+            ?>
+            <?php
+            if (session()->get('role') == 'admin' || session()->get('role') == 'front_office'):
+            ?>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="/penduduk">
+                        <i class="bi bi-person"></i>
+                        <span>Penduduk</span>
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/admin">
-                    <i class="bi bi-person"></i>
-                    <span>Pengguna</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="/kategori">
+                        <i class="bi bi-bookmarks-fill"></i>
+                        <span>Kategori</span>
+                    </a>
+                </li><!-- End Profile Page Nav -->
+            <?php
+            endif;
+            ?>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/penduduk">
-                    <i class="bi bi-person"></i>
-                    <span>Penduduk</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/kategori">
-                    <i class="bi bi-bookmarks-fill"></i>
-                    <span>Kategori</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
-
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-journal-text"></i>
-                    <span>Pengajuan Anda</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
+            <?php
+            if (session()->get('role') == 'penduduk'):
+            ?>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="<?= base_url() ?>penduduk/pengajuan/create">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Pengajuan</span>
+                    </a>
+                </li><!-- End Profile Page Nav -->
+            <?php
+            endif;
+            ?>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Pengajuan</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-menu-button-wide"></i>
+                    <?php
+                    if (session()->get('role') == 'penduduk') {
+                        echo "<span>Pengajuan Anda</span>";
+                    } elseif (session()->get('role') == 'front_office') {
+                        echo "<span>Pengajuan</span>";
+                    }
+                    ?>
+                    <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <!-- <li>
@@ -172,17 +195,17 @@
                         </a>
                     </li> -->
                     <li>
-                        <a href="components-alerts.html">
-                            <i class="bi bi-circle"></i><span>Accept</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="components-alerts.html">
+                        <a href="<?= base_url() ?>penduduk/pengajuan/process">
                             <i class="bi bi-circle"></i><span>Process</span>
                         </a>
                     </li>
                     <li>
-                        <a href="components-alerts.html">
+                        <a href="<?= base_url() ?>penduduk/pengajuan/accepte">
+                            <i class="bi bi-circle"></i><span>Accept</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url() ?>penduduk/pengajuan/completed">
                             <i class="bi bi-circle"></i><span>Completed</span>
                         </a>
                     </li>
