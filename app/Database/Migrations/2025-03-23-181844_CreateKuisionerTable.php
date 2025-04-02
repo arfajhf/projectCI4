@@ -17,6 +17,22 @@ class CreateKuisionerTable extends Migration
             ],
             'pertanyaan' => [
                 'type' => 'TEXT'
+            ],
+            'pilihan1' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'pilihan2' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'pilihan3' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'pilihan4' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
             ]
         ]);
         $this->forge->addKey('id', true);

@@ -12,7 +12,7 @@ class KuisionerModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['pertanyaan', 'pilihan1', 'pilihan2', 'pilihan3', 'pilihan4'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

@@ -12,7 +12,22 @@ class JawabanModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'layanan',
+        'usia',
+        'jenis_kelamin',
+        'pendidikan',
+        'pekerjaan',
+        'jawaban1',
+        'jawaban2',
+        'jawaban3',
+        'jawaban4',
+        'jawaban5',
+        'jawaban6',
+        'jawaban7',
+        'jawaban8',
+        'jawaban9'
+    ];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -21,7 +36,7 @@ class JawabanModel extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

@@ -15,7 +15,7 @@ class CreateHasilTable extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'admin_id' => [
+            'jawaban_id' => [
                 'type' => 'INT',
                 'constraint'     => 11,
                 'unsigned'       => true,
@@ -25,7 +25,7 @@ class CreateHasilTable extends Migration
             ]
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('admin_id', 'admins', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('jawaban_id', 'jawabans', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('hasils');
     }
 

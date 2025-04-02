@@ -9,8 +9,8 @@
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="<?= base_url() ?>asset/img/favicon.png" rel="icon">
-    <link href="<?= base_url() ?>asset/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="<?= base_url() ?>asset/img/logo.png" rel="icon">
+    <link href="<?= base_url() ?>asset/img/logo.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -52,8 +52,8 @@
                     <li><a href="#home" class="active">Home<br></a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="#layanan">Kuesioner</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="<?= base_url() ?>kuisioner">Kuesioner</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

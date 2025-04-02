@@ -1,0 +1,102 @@
+CRITICAL - 2025-03-29 01:30:02 --> TypeError: CodeIgniter\Database\BaseBuilder::where(): Argument #3 ($escape) must be of type ?bool, int given, called in A:\project\projectCI4\system\Model.php on line 928
+[Method: GET, Route: kuisioner]
+in SYSTEMPATH\Database\BaseBuilder.php on line 715.
+ 1 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->where('id', '<', 5)
+ 2 APPPATH\Controllers\KuisionerController.php(14): CodeIgniter\Model->__call('where', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-29 01:45:12 --> ErrorException: Undefined variable $data
+[Method: GET, Route: kuisioner]
+in APPPATH\Views\kuisioner\index.php on line 78.
+ 1 APPPATH\Views\kuisioner\index.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php', 78)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/kuisioner/index', [], true)
+ 5 APPPATH\Controllers\KuisionerController.php(20): view('/kuisioner/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-29 01:51:34 --> ErrorException: Undefined variable $index
+[Method: GET, Route: kuisioner]
+in APPPATH\Views\kuisioner\index.php on line 79.
+ 1 APPPATH\Views\kuisioner\index.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $index', 'A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php', 79)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/kuisioner/index', [], true)
+ 5 APPPATH\Controllers\KuisionerController.php(20): view('/kuisioner/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-29 01:52:07 --> ErrorException: Undefined variable $i
+[Method: GET, Route: kuisioner]
+in APPPATH\Views\kuisioner\index.php on line 79.
+ 1 APPPATH\Views\kuisioner\index.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php', 79)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/kuisioner/index', [], true)
+ 5 APPPATH\Controllers\KuisionerController.php(20): view('/kuisioner/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-29 02:12:42 --> ErrorException: Undefined variable $data
+[Method: GET, Route: kuisioner]
+in APPPATH\Views\kuisioner\index.php on line 79.
+ 1 APPPATH\Views\kuisioner\index.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php', 79)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/kuisioner/index', [], true)
+ 5 APPPATH\Controllers\KuisionerController.php(20): view('/kuisioner/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-29 02:13:57 --> ErrorException: Undefined array key ".pertanyaan"
+[Method: GET, Route: kuisioner]
+in APPPATH\Views\kuisioner\index.php on line 79.
+ 1 APPPATH\Views\kuisioner\index.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ".pertanyaan"', 'A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php', 79)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/kuisioner/index', [], true)
+ 5 APPPATH\Controllers\KuisionerController.php(20): view('/kuisioner/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-03-29 16:14:58 --> ErrorException: Undefined variable $awal
+[Method: GET, Route: kuisioner]
+in APPPATH\Views\kuisioner\index.php on line 80.
+ 1 APPPATH\Views\kuisioner\index.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $awal', 'A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php', 80)
+ 2 SYSTEMPATH\View\View.php(234): include('A:\\project\\projectCI4\\app\\Views\\kuisioner\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/kuisioner/index', [], true)
+ 5 APPPATH\Controllers\KuisionerController.php(20): view('/kuisioner/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')

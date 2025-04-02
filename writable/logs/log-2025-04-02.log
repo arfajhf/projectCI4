@@ -1,0 +1,311 @@
+DEBUG - 2025-04-02 05:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-02 05:40:19 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\JawabanModel"
+[Method: POST, Route: kuisioner/store]
+in SYSTEMPATH\Model.php on line 822.
+ 1 SYSTEMPATH\Model.php(822): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\JawabanModel')
+ 2 SYSTEMPATH\BaseModel.php(820): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+ERROR - 2025-04-02 05:43:06 --> mysqli_sql_exception: Column 'jawaban1' cannot be null in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ja...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ja...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ja...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ja...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 A:\project\projectCI4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 A:\project\projectCI4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 A:\project\projectCI4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 A:\project\projectCI4\app\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save(Array)
+#9 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+#10 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+#11 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#16 {main}
+CRITICAL - 2025-04-02 05:43:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'jawaban1' cannot be null
+[Method: POST, Route: kuisioner/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-04-02 05:43:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'jawaban1' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'Polri\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:43:06\', \'2025-04-02 05:43:06\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'Polri\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:43:06\', \'2025-04-02 05:43:06\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-04-02 05:43:06 --> [Caused by] mysqli_sql_exception: Column 'jawaban1' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'Polri\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:43:06\', \'2025-04-02 05:43:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'Polri\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:43:06\', \'2025-04-02 05:43:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'Polri\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:43:06\', \'2025-04-02 05:43:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+ERROR - 2025-04-02 05:54:19 --> mysqli_sql_exception: Column 'jawaban1' cannot be null in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ja...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ja...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ja...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ja...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 A:\project\projectCI4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 A:\project\projectCI4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 A:\project\projectCI4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 A:\project\projectCI4\app\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save(Array)
+#9 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+#10 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+#11 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#16 {main}
+CRITICAL - 2025-04-02 05:54:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'jawaban1' cannot be null
+[Method: POST, Route: kuisioner/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-04-02 05:54:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'jawaban1' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'PNS\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:54:19\', \'2025-04-02 05:54:19\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'PNS\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:54:19\', \'2025-04-02 05:54:19\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-04-02 05:54:19 --> [Caused by] mysqli_sql_exception: Column 'jawaban1' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'PNS\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:54:19\', \'2025-04-02 05:54:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'PNS\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:54:19\', \'2025-04-02 05:54:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KTP\', \'21\', \'laki-laki\', \'S3\', \'PNS\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'2025-04-02 05:54:19\', \'2025-04-02 05:54:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\KuisionerController.php(48): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-04-02 06:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-02 06:07:49 --> BadMethodCallException: Call to undefined method App\Models\JawabanModel::stat
+[Method: POST, Route: kuisioner/store]
+in SYSTEMPATH\Model.php on line 930.
+ 1 APPPATH\Controllers\KuisionerController.php(47): CodeIgniter\Model->__call('stat', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-04-02 06:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 06:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-02 07:03:35 --> mysqli_sql_exception: Column 'pendidikan' cannot be null in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ja...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ja...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ja...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ja...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 A:\project\projectCI4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 A:\project\projectCI4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 A:\project\projectCI4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 A:\project\projectCI4\app\Controllers\KuisionerController.php(47): CodeIgniter\BaseModel->save(Array)
+#9 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+#10 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+#11 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#16 {main}
+CRITICAL - 2025-04-02 07:03:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'pendidikan' cannot be null
+[Method: POST, Route: kuisioner/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\KuisionerController.php(47): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-04-02 07:03:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'pendidikan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KK\', \'21\', \'perempuan\', NULL, \'Wiraswasta\', \'2\', \'3\', \'3\', \'3\', \'2\', \'4\', \'3\', \'4\', \'3\', \'2025-04-02 07:03:35\', \'2025-04-02 07:03:35\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KK\', \'21\', \'perempuan\', NULL, \'Wiraswasta\', \'2\', \'3\', \'3\', \'3\', \'2\', \'4\', \'3\', \'4\', \'3\', \'2025-04-02 07:03:35\', \'2025-04-02 07:03:35\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\KuisionerController.php(47): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-04-02 07:03:35 --> [Caused by] mysqli_sql_exception: Column 'pendidikan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KK\', \'21\', \'perempuan\', NULL, \'Wiraswasta\', \'2\', \'3\', \'3\', \'3\', \'2\', \'4\', \'3\', \'4\', \'3\', \'2025-04-02 07:03:35\', \'2025-04-02 07:03:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KK\', \'21\', \'perempuan\', NULL, \'Wiraswasta\', \'2\', \'3\', \'3\', \'3\', \'2\', \'4\', \'3\', \'4\', \'3\', \'2025-04-02 07:03:35\', \'2025-04-02 07:03:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (\'KK\', \'21\', \'perempuan\', NULL, \'Wiraswasta\', \'2\', \'3\', \'3\', \'3\', \'2\', \'4\', \'3\', \'4\', \'3\', \'2025-04-02 07:03:35\', \'2025-04-02 07:03:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `jawabans` (`layanan`, `usia`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `jawaban1`, `jawaban2`, `jawaban3`, `jawaban4`, `jawaban5`, `jawaban6`, `jawaban7`, `jawaban8`, `jawaban9`, `created_at`, `updated_at`) VALUES (:layanan:, :usia:, :jenis_kelamin:, :pendidikan:, :pekerjaan:, :jawaban1:, :jawaban2:, :jawaban3:, :jawaban4:, :jawaban5:, :jawaban6:, :jawaban7:, :jawaban8:, :jawaban9:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\KuisionerController.php(47): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\KuisionerController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KuisionerController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-04-02 07:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-02 07:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

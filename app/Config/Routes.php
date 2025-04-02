@@ -53,4 +53,10 @@ $routes->group('/', function ($routes) {
         $routes->post('penduduk/pengajuan/store', 'PengajuanController::store');
         $routes->post('penduduk/pengajuan/get-requirements', 'PengajuanController::getRequirements');
     });
+
+    // kuisioner
+    $routes->group('/', function($routes){
+        $routes->get('/kuisioner', 'KuisionerController::index');
+        $routes->post('/kuisioner/store', 'KuisionerController::store');
+    });
 });

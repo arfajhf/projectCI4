@@ -15,23 +15,63 @@ class CreateJawabanTable extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'admin_id' => [
-                'type' => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+            'layanan' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
             ],
-            'kuisioner_id' => [
-                'type' => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
+            'usia' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
             ],
-            'jawaban' => [
+            'jenis_kelamin' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'pendidikan' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'pekerjaan' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'jawaban1' => [
                 'type' => 'INT',
+            ],
+            'jawaban2' => [
+                'type' => 'INT',
+            ],
+            'jawaban3' => [
+                'type' => 'INT',
+            ],
+            'jawaban4' => [
+                'type' => 'INT',
+            ],
+            'jawaban5' => [
+                'type' => 'INT',
+            ],
+            'jawaban6' => [
+                'type' => 'INT',
+            ],
+            'jawaban7' => [
+                'type' => 'INT',
+            ],
+            'jawaban8' => [
+                'type' => 'INT',
+            ],
+            'jawaban9' => [
+                'type' => 'INT',
+            ],
+            'created_at'   => [
+                'type' => 'DATETIME',
+                'null' => true
+            ],
+            'updated_at'   => [
+                'type' => 'DATETIME',
+                'null' => true
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('admin_id', 'admins', 'id', 'CASCADE', 'CASCADE');
-        $this->forge->addForeignKey('kuisioner_id', 'kuisioners', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('jawabans');
     }
 

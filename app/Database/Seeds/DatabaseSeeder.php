@@ -9,8 +9,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(
-            AdminSeeder::class,
-            IdentificationCardSeeder::class
+            // AdminSeeder::class,
+            // IdentificationCardSeeder::class
+            KuisionerSeeder::class
         );
     }
 }

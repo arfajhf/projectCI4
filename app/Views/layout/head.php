@@ -176,41 +176,43 @@
             endif;
             ?>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i>
-                    <?php
-                    if (session()->get('role') == 'penduduk') {
-                        echo "<span>Pengajuan Anda</span>";
-                    } elseif (session()->get('role') == 'front_office') {
-                        echo "<span>Pengajuan</span>";
-                    }
-                    ?>
-                    <i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <!-- <li>
+            <?php if (session()->get('role') == 'front_office' || session()->get('role') == 'penduduk'): ?>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-menu-button-wide"></i>
+                        <?php
+                        if (session()->get('role') == 'penduduk') {
+                            echo "<span>Pengajuan Anda</span>";
+                        } elseif (session()->get('role') == 'front_office') {
+                            echo "<span>Pengajuan</span>";
+                        }
+                        ?>
+                        <i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <!-- <li>
                         <a href="components-alerts.html">
                             <i class="bi bi-circle"></i><span>Pending</span>
                         </a>
                     </li> -->
-                    <li>
-                        <a href="<?= base_url() ?>penduduk/pengajuan/process">
-                            <i class="bi bi-circle"></i><span>Process</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url() ?>penduduk/pengajuan/accepte">
-                            <i class="bi bi-circle"></i><span>Accept</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url() ?>penduduk/pengajuan/completed">
-                            <i class="bi bi-circle"></i><span>Completed</span>
-                        </a>
-                    </li>
-                </ul>
-            </li><!-- End Components Nav -->
+                        <li>
+                            <a href="<?= base_url() ?>penduduk/pengajuan/process">
+                                <i class="bi bi-circle"></i><span>Process</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>penduduk/pengajuan/accepte">
+                                <i class="bi bi-circle"></i><span>Accept</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>penduduk/pengajuan/completed">
+                                <i class="bi bi-circle"></i><span>Completed</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Components Nav -->
+            <?php endif ?>
 
             <!-- <li class="nav-heading">Pages</li> -->
 
