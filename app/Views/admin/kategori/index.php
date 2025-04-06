@@ -6,8 +6,9 @@
 
         <div class="card-body">
             <h5 class="card-title">Data Kategori</h5>
-
-            <a href="/kategori/create" class="btn btn-outline-primary">Tambah Kategori</a>
+            <?php if (session()->get('role') == 'admin'): ?>
+                <a href="/kategori/create" class="btn btn-outline-primary">Tambah Kategori</a>
+            <?php endif ?>
 
             <div class="responsive-table">
                 <table class="table table-borderless datatable">
@@ -45,6 +46,14 @@
                                     <?php else: ?>
                                         <span class="text-muted">Tidak ada persyaratan</span>
                                     <?php endif; ?>
+                                </td>
+                                <td>
+                                    <form action="<?php base_url() ?>/kategori/delete/<?= $document['id'] ?>" method="post"
+                                        class="form-basic d-inline">
+                                        <?= csrf_field(); ?>
+                                        <button type="submit" class="btn btn-danger"
+                                            onclick="return confirm('Apa anda yakin ingin menghapus data ini?')">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

@@ -8,155 +8,187 @@
             <div class="row">
 
                 <!-- Sales Card -->
-                <div class="<?php if (session()->get('role') == 'admin'): ?>
-                    col-xxl-4 col-md-4
-                <?php elseif (session()->get('role') == 'front_office'): ?>
-                    col-xxl-6 col-md-6
-                <?php endif ?>">
-                    <div class="card info-card sales-card">
+                <?php if (session()->get('role') == 'admin'): ?>
+                    <!-- Konten khusus untuk admin -->
+                    <div class="col-xxl-4 col-md-4">
+                        <div class="card info-card sales-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pengguna</h5>
 
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title">Pengguna</h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-cart"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>145</h6>
-                                    <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $identificationData ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Orang</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div><!-- End Sales Card -->
+                <?php elseif (session()->get('role') == 'front_office'): ?>
+                    <!-- Konten khusus untuk front_office -->
+                    <div class="col-xxl-4 col-md-4">
+                        <div class="card info-card sales-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pengguna</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $identificationData ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Orang</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
                 <?php if (session()->get('role') == 'admin'): ?>
                     <div class="col-xxl-4 col-md-4">
                         <div class="card info-card sales-card">
-
-                            <div class="filter">
-                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                    <li class="dropdown-header text-start">
-                                        <h6>Filter</h6>
-                                    </li>
-
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
-                            </div>
 
                             <div class="card-body">
                                 <h5 class="card-title">Front Office</h5>
 
                                 <div class="d-flex align-items-center">
                                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-cart"></i>
+                                        <i class="bi bi-person"></i>
                                     </div>
                                     <div class="ps-3">
-                                        <h6>145</h6>
-                                        <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                                        <h6><?= $adminData ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Orang</span>
 
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                    </div><!-- End Sales Card -->
+                    </div>
                 <?php endif ?>
-                <div class="
                 <?php if (session()->get('role') == 'admin'): ?>
-                    col-xxl-4 col-md-4
-                <?php elseif (session()->get('role') == 'front_office'): ?>
-                    col-xxl-6 col-md-6
-                <?php endif ?>
-                    ">
-                    <div class="card info-card sales-card">
+                    <div class="col-xxl-4 col-md-4">
+                        <div class="card info-card sales-card">
 
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
+                            <div class="card-body">
+                                <h5 class="card-title">Pengajuan</h5>
 
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-card-text"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $submissionData ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Document</span>
 
-                        <div class="card-body">
-                            <h5 class="card-title">Pengajuan</h5>
-
-                            <div class="d-flex align-items-center">
-                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-cart"></i>
-                                </div>
-                                <div class="ps-3">
-                                    <h6>145</h6>
-                                    <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
-                </div><!-- End Sales Card -->
+                <?php endif ?>
+
+                <?php if (session()->get('role') == 'front_office'): ?>
+                    <div class="col-xxl-4 col-md-4">
+                        <div class="card info-card sales-card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Pengajuan Diprocess</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-card-text"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $process ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Document</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-md-4">
+                        <div class="card info-card sales-card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Pengajuan Complated</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-card-checklist"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $completed ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Document</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endif ?>
+
+                <?php if (session()->get('role') == 'penduduk'): ?>
+                    <div class="col-xxl-6 col-md-6">
+                        <div class="card info-card sales-card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Pengajuan Diprocess</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-card-text"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $procesid ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Document</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-md-6">
+                        <div class="card info-card sales-card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Pengajuan Complated</h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-card-checklist"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6><?= $completedid ?></h6>
+                                        <span class="text-muted small pt-2 ps-1">Document</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endif ?>
             </div>
         </div>
 
         <?php if (session()->get('role') == 'admin'): ?>
             <canvas id="clusterChart"></canvas>
 
-
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
                 var ctx = document.getElementById('clusterChart').getContext('2d');
                 var clusterChart = new Chart(ctx, {
-                    type: 'bar', // Bisa juga 'pie', 'doughnut', atau 'line'
-                    data: {
-                        labels: <?= json_encode(array_column($clusterData, 'cluster')) ?>,
-                        datasets: [{
-                            // label: 'Jumlah Responden per Cluster',
-                            data: <?= json_encode(array_column($clusterData, 'jumlah')) ?>,
-                            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], // Warna tiap cluster
-                            borderColor: '#333',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
-            </script><canvas id="clusterChart"></canvas>
-
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-                var ctx = document.getElementById('clusterChart').getContext('2d');
-                var clusterChart = new Chart(ctx, {
-                    type: 'bar', // Bisa juga 'pie', 'doughnut', atau 'line'
+                    type: 'line', // Bisa juga 'pie', 'doughnut', atau 'line'
                     data: {
                         labels: <?= json_encode(array_column($clusterData, 'cluster')) ?>,
                         datasets: [{

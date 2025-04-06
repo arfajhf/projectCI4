@@ -60,4 +60,11 @@ class KategoriController extends BaseController
 
         return redirect()->to('/kategori')->with('success', 'Kategori Berhasil Ditambahkan');
     }
+
+    public function delete($id){
+        $kategoriModel = new DocumentCategorieModel();
+
+        $kategoriModel->delete($id);
+        return redirect()->to('/kategori')->with('success', 'Kategori berhasil dihapus');
+    }
 }

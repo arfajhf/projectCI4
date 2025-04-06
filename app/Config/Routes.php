@@ -37,6 +37,7 @@ $routes->group('/', function ($routes) {
         $routes->get('/kategori', 'KategoriController::index');
         $routes->get('/kategori/create', 'KategoriController::create');
         $routes->post('/kategori/store', 'KategoriController::store');
+        $routes->post('/kategori/delete/(:num)', 'KategoriController::delete/$1');
     });
 
     // FO
