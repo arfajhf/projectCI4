@@ -23,6 +23,13 @@ class Auth extends BaseController
 
             $userModel = new AdminModel();
             $user = $userModel->where('email', $email)->first();
+            // dd($user);
+            // if ($user) {
+            //     echo 'Password input: ' . $password . '<br>';
+            //     echo 'Password DB: ' . $user['password'] . '<br>';
+            //     var_dump(password_verify($password, $user['password']));
+            //     die;
+            // }
 
             if ($user && password_verify($password, $user['password'])) {
                 session()->set([
@@ -44,21 +51,27 @@ class Auth extends BaseController
     }
 
     // regis
-    public function register(){
+    public function register()
+    {
         return view('admin/penduduk/create');
     }
 
-    public function store(){
+    public function store()
+    {
         $user = new AdminModel();
         $penduduk = new IdentificationCardModel();
 
+        // dd($this->request->getPost('password'));
         $dataUser = [
             'name' => $this->request->getPost('name'),
             'email' => $this->request->getPost('email'),
             'phone' => $this->request->getPost('phone'),
             'role' => 'penduduk',
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
         ];
+        // dd($dataUser);
 
         $user->insert($dataUser);
         $akunID = $user->insertID(); // Dapatkan ID akun yang baru
@@ -75,6 +88,8 @@ class Auth extends BaseController
             'nationality' => $this->request->getPost('kewarganegaraan'),
             'blood_type' => $this->request->getPost('goldar'),
             'addres' => $this->request->getPost('alamat'),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
         ];
         $penduduk->insert($userData);
 

@@ -38,7 +38,7 @@ class AdminModel extends Model
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert   = ['hashPassword'];
+    protected $beforeInsert   = [];
     protected $afterInsert    = [];
     protected $beforeUpdate   = [];
     protected $afterUpdate    = [];
@@ -47,13 +47,13 @@ class AdminModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    protected function hashPassword(array $data)
-    {
-        if (isset($data['data']['password'])) {
-            $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
-        }
-        return $data;
-    }
+    // protected function hashPassword(array $data)
+    // {
+    //     if (isset($data['data']['password'])) {
+    //         $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+    //     }
+    //     return $data;
+    // }
 
     public function getAdminWithIDCard($adminId)
     {
