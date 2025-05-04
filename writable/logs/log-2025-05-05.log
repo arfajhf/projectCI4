@@ -354,3 +354,32 @@ DEBUG - 2025-05-05 01:40:37 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-05-05 01:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-05-05 01:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-05-05 01:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 01:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-05 01:46:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "cetak/pdfKategori.php"
+[Method: POST, Route: cetak/perkategori]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cetak/pdfKategori.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('cetak/pdfKategori', [], true)
+ 3 APPPATH\Controllers\Pdf\PdfController.php(77): view('cetak/pdfKategori', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->kategori()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 01:47:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "cetak/pdf.php"
+[Method: POST, Route: cetak/perkategori]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cetak/pdf.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('cetak/pdf', [], true)
+ 3 APPPATH\Controllers\Pdf\PdfController.php(77): view('cetak/pdf', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->kategori()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-05-05 01:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 01:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
