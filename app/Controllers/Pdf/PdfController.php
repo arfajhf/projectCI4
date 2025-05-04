@@ -74,7 +74,7 @@ class PdfController extends BaseController
         $dompdf->setPaper('A4', 'landscape');
 
         // Ambil HTML dari view
-        $html = view('cetak/pdfTanggal', ['title' => 'Laporan Pengajuan Perkategori', 'data' => $submission]);
+        $html = view('cetak/pdfKategori', ['title' => 'Laporan Pengajuan Perkategori', 'data' => $submission]);
 
         $dompdf->loadHtml($html);
         $dompdf->render();
