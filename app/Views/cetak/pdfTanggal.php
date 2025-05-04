@@ -38,6 +38,7 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th>No Antrian</th>
                 <th>NIK</th>
                 <th>No Handphone</th>
                 <th>Nama</th>
@@ -50,6 +51,7 @@
             <?php foreach ($data as $i => $row): ?>
                 <tr>
                     <td style="text-align: center;"><?= $i + 1 ?></td>
+                    <td><?= $row['queue'] ?></td>
                     <td><?= $row['identity_number'] ?></td>
                     <td><?= $row['admin_phone'] ?></td>
                     <td><?= $row['admin_name'] ?></td>
