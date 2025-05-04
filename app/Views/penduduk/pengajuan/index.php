@@ -39,16 +39,24 @@
                                     <td><?= esc(date('d-m-Y H:i', strtotime($pengaju['created_at']))) ?></td>
                                     <td><?= esc($pengaju['queue']) ?></td>
                                     <td>
-                                        <span class="badge 
+                                        <span class="badge
                                         <?php if (esc($pengaju['status']) == 'process') {
                                             echo 'bg-danger';
                                         } elseif (esc($pengaju['status']) == 'accepte') {
                                             echo 'bg-warning';
                                         } elseif (esc($pengaju['status']) == 'completed') {
                                             echo 'bg-success';
+                                        } elseif (esc($pengaju['status']) == 'pending') {
+                                            echo 'bg-secondary';
                                         }
                                         ?>">
-                                            <?= esc($pengaju['status']) ?>
+                                        <?php
+                                            if(esc($pengaju['status'] == 'pending')){
+                                                echo 'ditolak';
+                                            }else{
+                                                echo esc($pengaju['status']);
+                                            }
+                                        ?>
                                         </span>
                                     </td>
                                     <td>

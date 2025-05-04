@@ -44,11 +44,13 @@ $routes->group('/', function ($routes) {
     $routes->group('/', function($routes){
         $routes->get('/pengajuan/view/(:num)', 'PengajuanController::view/$1');
         $routes->post('/pengajuan/accept/(:num)', 'PengajuanController::update/$1');
+        $routes->post('/pengajuan/tolak/(:num)', 'PengajuanController::tolak/$1');
     });
 
     $routes->group('/', function($routes){
         $routes->get('penduduk/pengajuan/accepte', 'PengajuanController::index');
         $routes->get('penduduk/pengajuan/process', 'PengajuanController::index');
+        $routes->get('penduduk/pengajuan/pending', 'PengajuanController::index');
         $routes->get('penduduk/pengajuan/completed', 'PengajuanController::index');
         $routes->get('penduduk/pengajuan/create', 'PengajuanController::create');
         $routes->post('penduduk/pengajuan/store', 'PengajuanController::store');

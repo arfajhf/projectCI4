@@ -74,18 +74,21 @@ class PengajuanController extends BaseController
 
         $admin = session()->get('admin_id');
         $today = date('Y-m-d');
+        $mon = date('Y');
+        // dd($mon);
 
         $queueNumber = $submissionModel
             ->where('created_at >=', $today . ' 00:00:00')
             ->where('created_at <=', $today . ' 23:59:59')
             ->countAllResults() + 1;
-
+        $number = $mon . $queueNumber;
+        // dd($number);
         // Simpan data
         $submissionModel->insert([
             'admin_id'    => $admin,
             'document_id' => $this->request->getPost('document_id'),
             'status'      => 'process',
-            'queue'       => 'BD' . $queueNumber,
+            'queue'       => $number,
             'created_at'  => date('Y-m-d H:i:s'),
             'updated_at'  => date('Y-m-d H:i:s'),
         ]);
@@ -126,5 +129,17 @@ class PengajuanController extends BaseController
             $submissionModel->update($id, ['status' => 'completed']);
             return redirect()->to('penduduk/pengajuan/completed')->with('success', 'Data berhasil diubah');
         }
+    }
+    public function tolak($id)
+    {
+        $submissionModel = new SubmissionModel();
+        $pengajuan = $submissionModel->find($id);
+
+        if (!$pengajuan) {
+            return redirect()->back()->with('error', 'Data tidak ditemukan');
+        }
+
+        $submissionModel->update($id, ['status' => 'pending']);
+        return redirect()->to('penduduk/pengajuan/pending')->with('success', 'Data berhasil diubah');
     }
 }

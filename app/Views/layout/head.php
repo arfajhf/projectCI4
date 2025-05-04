@@ -59,8 +59,8 @@
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Web Designer</span>
+                            <h6><?= esc(session()->get('admin_name')) ?></h6>
+                            <span><?= esc(session()->get('role')) ?></span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -178,6 +178,11 @@
                         <li>
                             <a href="<?= base_url() ?>penduduk/pengajuan/completed">
                                 <i class="bi bi-circle"></i><span>Completed</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>penduduk/pengajuan/pending">
+                                <i class="bi bi-circle"></i><span>Ditolak</span>
                             </a>
                         </li>
                     </ul>

@@ -92,27 +92,47 @@
                                     <div class="col-lg-9 col-md-8"> <?= esc($pengajuan['queue']) ?></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <form action="<?= base_url() ?>pengajuan/accept/<?= esc($pengajuan['id']) ?>" method="post"
-                                    class="form-basic d-inline">
-                                    <?= csrf_field(); ?>
-                                    <button type="submit" class="btn  
+                            <?php
+                            if (!esc($pengajuan['status'] == 'pending')) {
+
+                            ?>
+                                <div class="col-md-6">
+                                    <form action="<?= base_url() ?>pengajuan/accept/<?= esc($pengajuan['id']) ?>" method="post"
+                                        class="form-basic d-inline">
+                                        <?= csrf_field(); ?>
+                                        <button type="submit" class="btn
                                     <?php if (esc($pengajuan['status']) == 'process') {
                                         echo 'btn-outline-warning';
                                     } elseif (esc($pengajuan['status']) == 'accepte') {
                                         echo 'btn-outline-success';
                                     }
                                     ?>"
-                                        onclick="return confirm('Apa anda yakin ingin mengubah data ini?')">
-                                        <?php if (esc($pengajuan['status']) == 'process') {
-                                            echo 'Accept';
-                                        } elseif (esc($pengajuan['status']) == 'accepte') {
-                                            echo 'Completed';
-                                        }
-                                        ?>
-                                    </button>
-                                </form>
-                            </div>
+                                            onclick="return confirm('Apa anda yakin ingin mengubah data ini?')">
+                                            <?php if (esc($pengajuan['status']) == 'process') {
+                                                echo 'Accept';
+                                            } elseif (esc($pengajuan['status']) == 'accepte') {
+                                                echo 'Completed';
+                                            }
+                                            ?>
+                                        </button>
+                                    </form>
+                                    <?php
+                                    if (esc($pengajuan['status'] == 'process')) {
+                                    ?>
+                                        <form action="<?= base_url() ?>pengajuan/tolak/<?= esc($pengajuan['id']) ?>" method="post"
+                                            class="form-basic d-inline">
+                                            <?= csrf_field(); ?>
+                                            <button type="submit" class="btn btn-outline-secondary">
+                                                Tolak
+                                            </button>
+                                        </form>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

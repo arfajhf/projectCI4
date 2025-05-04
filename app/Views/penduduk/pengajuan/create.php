@@ -4,7 +4,11 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <?php if (session()->getFlashdata('errors')): ?>
+                <?php
+
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
+ if (session()->getFlashdata('errors')): ?>
                     <div class="alert alert-danger">
                         <ul>
                             <?php foreach (session()->getFlashdata('errors') as $error): ?>
@@ -33,7 +37,7 @@
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Submit</button>
-                        <a type="reset" href="/admin" class="btn btn-secondary">Kembali</a>
+                        <a type="reset" href="<?php base_url() ?>/dashboard" class="btn btn-secondary">Kembali</a>
                     </div>
                 </form><!-- Vertical Form -->
 
@@ -61,7 +65,7 @@
                 .then(requirements => {
                     requirements.forEach(req => {
                         let checkbox = document.createElement("div");
-                        checkbox.innerHTML = `<input type="checkbox" name="requirements[]" value="${req}"> ${req}`;
+                        checkbox.innerHTML = `<input type="checkbox" required name="requirements[]" value="${req}"> ${req}`;
                         requirementsContainer.appendChild(checkbox);
                     });
                 });
