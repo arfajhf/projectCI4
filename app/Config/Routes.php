@@ -50,6 +50,8 @@ $routes->group('/', function ($routes) {
     $routes->group('/', ['namespace' => 'App\Controllers\Pdf'], function($routes){
         $routes->get('/cetak/tanggal', 'PdfController::pertanggal');
         $routes->post('/cetak/pertanggal', 'PdfController::tanggal');
+        $routes->get('/cetak/kategori', 'PdfController::perkategori');
+        $routes->post('/cetak/perkategori', 'PdfController::kategori');
     });
 
     $routes->group('/', function($routes){

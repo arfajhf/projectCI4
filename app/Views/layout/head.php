@@ -203,7 +203,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url() ?>penduduk/pengajuan/accepte">
+                            <a href="<?= base_url() ?>cetak/kategori">
                                 <i class="bi bi-circle"></i><span>Perkategori</span>
                             </a>
                         </li>
