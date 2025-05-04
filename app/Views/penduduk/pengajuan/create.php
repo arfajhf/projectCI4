@@ -6,9 +6,9 @@
             <div class="card-body">
                 <?php
 
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+                use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
- if (session()->getFlashdata('errors')): ?>
+                if (session()->getFlashdata('errors')): ?>
                     <div class="alert alert-danger">
                         <ul>
                             <?php foreach (session()->getFlashdata('errors') as $error): ?>
@@ -17,7 +17,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
                         </ul>
                     </div>
                 <?php endif; ?>
-                <h5 class="card-title">Tambah Front Office</h5>
+                <h5 class="card-title">Tambah Pengajuan</h5>
 
                 <!-- Vertical Form -->
                 <form class="row g-3" action="<?= base_url() ?>penduduk/pengajuan/store" method="post">

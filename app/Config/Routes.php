@@ -47,6 +47,11 @@ $routes->group('/', function ($routes) {
         $routes->post('/pengajuan/tolak/(:num)', 'PengajuanController::tolak/$1');
     });
 
+    $routes->group('/', ['namespace' => 'App\Controllers\Pdf'], function($routes){
+        $routes->get('/cetak/tanggal', 'PdfController::pertanggal');
+        $routes->post('/cetak/pertanggal', 'PdfController::tanggal');
+    });
+
     $routes->group('/', function($routes){
         $routes->get('penduduk/pengajuan/accepte', 'PengajuanController::index');
         $routes->get('penduduk/pengajuan/process', 'PengajuanController::index');

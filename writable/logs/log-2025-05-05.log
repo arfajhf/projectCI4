@@ -1,0 +1,325 @@
+DEBUG - 2025-05-05 00:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 00:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 00:42:05 --> mysqli_sql_exception: Unknown column 'submission.created_at' in 'WHERE' in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-05-05 00:42:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'submission.created_at' in 'WHERE'
+[Method: POST, Route: cetak/pertanggal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = :submission.created_at:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 00:42:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'submission.created_at' in 'WHERE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = \'2025-05-05\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = \'2025-05-05\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = :submission.created_at:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 00:42:05 --> [Caused by] mysqli_sql_exception: Unknown column 'submission.created_at' in 'WHERE'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = \'2025-05-05\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = \'2025-05-05\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = \'2025-05-05\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `submission`.`created_at` = :submission.created_at:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+ERROR - 2025-05-05 00:42:35 --> mysqli_sql_exception: Column 'created_at' in WHERE is ambiguous in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-05-05 00:42:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'created_at' in WHERE is ambiguous
+[Method: POST, Route: cetak/pertanggal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = :created_at:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 00:42:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'created_at' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = \'2025-05-05\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = \'2025-05-05\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = :created_at:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 00:42:35 --> [Caused by] mysqli_sql_exception: Column 'created_at' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = \'2025-05-05\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = \'2025-05-05\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = \'2025-05-05\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` = :created_at:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pdf\PdfController.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-05-05 00:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-05 00:45:50 --> mysqli_sql_exception: Column 'created_at' in WHERE is ambiguous in A:\project\projectCI4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 A:\project\projectCI4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submiss...', 0)
+#1 A:\project\projectCI4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submiss...')
+#2 A:\project\projectCI4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submiss...')
+#3 A:\project\projectCI4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submiss...', Array, false)
+#4 A:\project\projectCI4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 A:\project\projectCI4\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 A:\project\projectCI4\app\Controllers\Pdf\PdfController.php(29): CodeIgniter\BaseModel->findAll()
+#7 A:\project\projectCI4\system\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+#8 A:\project\projectCI4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+#9 A:\project\projectCI4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 A:\project\projectCI4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 A:\project\projectCI4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 A:\project\projectCI4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 A:\project\projectCI4\system\rewrite.php(44): require_once('A:\\project\\proj...')
+#14 {main}
+CRITICAL - 2025-05-05 00:45:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'created_at' in WHERE is ambiguous
+[Method: POST, Route: cetak/pertanggal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= :created_at:
+AND `created_at` <= :created_at.1:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Pdf\PdfController.php(29): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 00:45:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'created_at' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= \'2025-05-04 00:00:00\'
+AND `created_at` <= \'2025-05-04 23:59:59\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= \'2025-05-04 00:00:00\'
+AND `created_at` <= \'2025-05-04 23:59:59\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= :created_at:
+AND `created_at` <= :created_at.1:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Pdf\PdfController.php(29): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+CRITICAL - 2025-05-05 00:45:50 --> [Caused by] mysqli_sql_exception: Column 'created_at' in WHERE is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= \'2025-05-04 00:00:00\'
+AND `created_at` <= \'2025-05-04 23:59:59\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= \'2025-05-04 00:00:00\'
+AND `created_at` <= \'2025-05-04 23:59:59\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= \'2025-05-04 00:00:00\'
+AND `created_at` <= \'2025-05-04 23:59:59\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `submissions`.*, `documentcategories`.`name` as `document_name`, `documentcategories`.`requirements` as `requirements`, `documentcategories`.`category` as `document_category`, `admins`.`name` as `admin_name`, `admins`.`email` as `admin_email`, `admins`.`phone` as `admin_phone`, `identificationcards`.`place_of_birth`, `identificationcards`.`date_of_birth`, `identificationcards`.`nationality`, `identificationcards`.`identity_number`, `identificationcards`.`admin_id` as `id_admin`
+FROM `submissions`
+LEFT JOIN `documentcategories` ON `documentcategories`.`id` = `submissions`.`document_id`
+LEFT JOIN `admins` ON `admins`.`id` = `submissions`.`admin_id`
+LEFT JOIN `identificationcards` ON `identificationcards`.`admin_id` = `submissions`.`admin_id`
+WHERE `created_at` >= :created_at:
+AND `created_at` <= :created_at.1:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Pdf\PdfController.php(29): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pdf\PdfController->tanggal()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pdf\PdfController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('A:\\project\\projectCI4\\public\\index.php')
+DEBUG - 2025-05-05 01:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-05 01:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

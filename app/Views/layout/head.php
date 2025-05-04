@@ -189,6 +189,28 @@
                 </li><!-- End Components Nav -->
             <?php endif ?>
 
+            <?php if (session()->get('role') == 'front_office'): ?>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#cetak-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-card-text"></i>
+                        Cetak Pengajuan
+                        <i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="cetak-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="<?= base_url() ?>cetak/tanggal">
+                                <i class="bi bi-circle"></i><span>Pertanggal</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= base_url() ?>penduduk/pengajuan/accepte">
+                                <i class="bi bi-circle"></i><span>Perkategori</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Components Nav -->
+            <?php endif ?>
+
             <!-- <li class="nav-heading">Pages</li> -->
 
         </ul>
@@ -204,9 +226,9 @@
 
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>ArFaj</span></strong>. Made With Love
+            &copy; Copyright <strong><span>Disdukcapil</span></strong>. Made With Love
         </div>
-        <div class="credits">Designed by <a href="/dashboard">ArFaj Corporate</a>
+        <div class="credits">Designed by <a href="/dashboard">Disdukcapil</a>
         </div>
     </footer><!-- End Footer -->
 
