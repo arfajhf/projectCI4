@@ -26,6 +26,15 @@
                         <label for="tanggal" class="form-label">Pilih Tanggal</label>
                         <input type="date" name="tanggal" class="form-control" required>
                     </div>
+                    <div class="col-12">
+                        <label for="tanggal" class="form-label">Pilih Kategori</label>
+                        <select name="document_id" id="document_id" class="form-control" required>
+                            <option value="">Pilih Kategori</option>
+                            <?php foreach ($documents as $document) : ?>
+                                <option value="<?= $document['id'] ?>"><?= esc($document['category']) ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
                     <div class="text-start">
                         <button type="submit" class="btn btn-primary">Cetak</button>
                         <a type="reset" href="<?php base_url() ?>/dashboard" class="btn btn-secondary">Kembali</a>

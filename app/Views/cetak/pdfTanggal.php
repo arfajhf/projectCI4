@@ -45,6 +45,7 @@
                 <th>Document</th>
                 <th>Kategori</th>
                 <th>Tanggal</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -58,6 +59,15 @@
                     <td><?= $row['document_name'] ?></td>
                     <td><?= $row['document_category'] ?></td>
                     <td><?= date('d-m-Y', strtotime($row['created_at'])) ?></td>
+                    <td>
+                        <?php
+                        if ($row['status'] == 'pending') {
+                            echo "ditolak";
+                        }else{
+                            echo $row['status'];
+                        }
+                        ?>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

@@ -14,7 +14,9 @@ class PdfController extends BaseController
 {
     public function pertanggal()
     {
-        return view('cetak/tanggal');
+        $modelKategori = new DocumentCategorieModel();
+        $documents = $modelKategori->findAll();
+        return view('cetak/tanggal', compact('documents'));
     }
     public function perkategori()
     {
@@ -27,12 +29,14 @@ class PdfController extends BaseController
     {
 
         $tanggal = $this->request->getPost('tanggal');
+        $kategori = $this->request->getPost('document_id');
         $dompdf = new Dompdf();
         $modelSubmision = new SubmissionModel();
 
         $submission = $modelSubmision->getWithDocuments()
             ->where('submissions.created_at >=', $tanggal . ' 00:00:00')
             ->where('submissions.created_at <=', $tanggal . ' 23:59:59')
+            ->where('submissions.document_id', $kategori)
             ->findAll();
 
         // dd($submission);
@@ -47,7 +51,7 @@ class PdfController extends BaseController
         $dompdf->setPaper('A4', 'landscape');
 
         // Ambil HTML dari view
-        $html = view('cetak/pdfTanggal', ['title' => 'Laporan Pengajuan Pertanggal', 'data' => $submission]);
+        $html = view('cetak/pdfTanggal', ['title' => 'Laporan Pengajuan Pertanggal Kategori', 'data' => $submission]);
 
         $dompdf->loadHtml($html);
         $dompdf->render();
@@ -62,7 +66,7 @@ class PdfController extends BaseController
         $modelSubmision = new SubmissionModel();
 
         $submission = $modelSubmision->getWithDocuments()
-            ->where('submissions.document_id', $kategori)
+            ->where('status', $kategori)
             ->findAll();
 
         // dd($submission);
@@ -74,10 +78,10 @@ class PdfController extends BaseController
         $dompdf->setPaper('A4', 'landscape');
 
         // Ambil HTML dari view
-        $html = view('cetak/pdfTanggal', ['title' => 'Laporan Pengajuan Perkategori', 'data' => $submission]);
+        $html = view('cetak/pdfTanggal', ['title' => 'Laporan Pengajuan Perstatus', 'data' => $submission]);
 
         $dompdf->loadHtml($html);
         $dompdf->render();
-        $dompdf->stream("laporanPerkategori.pdf", ["Attachment" => false]); // true = download, false = tampilkan
+        $dompdf->stream("laporanPerstatus.pdf", ["Attachment" => false]); // true = download, false = tampilkan
     }
 }

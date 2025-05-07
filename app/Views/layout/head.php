@@ -199,12 +199,12 @@
                     <ul id="cetak-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
                             <a href="<?= base_url() ?>cetak/tanggal">
-                                <i class="bi bi-circle"></i><span>Pertanggal</span>
+                                <i class="bi bi-circle"></i><span>Pertanggal Kategori</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?= base_url() ?>cetak/kategori">
-                                <i class="bi bi-circle"></i><span>Perkategori</span>
+                                <i class="bi bi-circle"></i><span>Perstatus</span>
                             </a>
                         </li>
                     </ul>
