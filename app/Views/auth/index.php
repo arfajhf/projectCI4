@@ -53,8 +53,8 @@
                                 <div class="card-body">
 
                                     <div class="pt-4 pb-2">
-                                        <h5 class="card-title text-center pb-0 fs-4">Login Dengan Akun Anda</h5>
-                                        <p class="text-center small">Masukan Email & Password untuk Login</p>
+                                        <h5 class="card-title text-center pb-0 fs-4">Masuk Dengan Akun Anda</h5>
+                                        <p class="text-center small">Masukan Email & Kata Sandi untuk Login</p>
                                     </div>
 
                                     <form class="row g-3 needs-validation" action="/login" method="POST">
@@ -73,15 +73,15 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <label for="yourPassword" class="form-label">Password</label>
+                                            <label for="yourPassword" class="form-label">Kata Sandi</label>
                                             <input type="password" name="password" class="form-control" id="yourPassword" required>
                                             <div class="invalid-feedback">Please enter your password!</div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100" type="submit">Login</button>
+                                            <button class="btn btn-primary w-100" type="submit">Masuk</button>
                                         </div>
                                         <div class="col-12">
-                                            <p class="small mb-0">Belum punya akun? <a href="/registrasi">Sign Up</a></p>
+                                            <p class="small mb-0">Belum punya akun? <a href="/registrasi">Daftar</a></p>
                                         </div>
                                     </form>
 
@@ -89,7 +89,7 @@
                             </div>
 
                             <div class="credits">
-                                Designed by <a href="https://bootstrapmade.com/">ArFaj Corporate</a>
+                                Designed by <a href="https://bootstrapmade.com/">DisdukCapil</a>
                             </div>
 
                         </div>

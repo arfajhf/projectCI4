@@ -18,7 +18,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Kategori</th>
                             <th scope="col">Persyaratan</th>
-                            <th scope="col" class="text-center">Action</th>
+                            <th scope="col" class="text-center">Aksi</th>
                             <!-- <th scope="col">Action</th> -->
                         </tr>
                     </thead>

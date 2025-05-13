@@ -49,16 +49,16 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="<?= base_url() ?>#home">Home<br></a></li>
-                    <li><a href="<?= base_url() ?>#about">About</a></li>
+                    <li><a href="<?= base_url() ?>#home">Beranda<br></a></li>
+                    <li><a href="<?= base_url() ?>#about">Tentang</a></li>
                     <li><a href="<?= base_url() ?>#layanan">Layanan</a></li>
-                    <li><a href="<?= base_url() ?>#contact">Contact</a></li>
-                    <li><a href="<?= base_url() ?>kuisioner" class="active">Kuesioner</a></li>
+                    <li><a href="<?= base_url() ?>#contact">Kontak</a></li>
+                    <li><a href="<?= base_url() ?>kuisioner" class="active">Pertanyaan</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted flex-md-shrink-0" href="/login">Log In</a>
+            <a class="btn-getstarted flex-md-shrink-0" href="/login">Masuk</a>
 
         </div>
     </header>
@@ -76,7 +76,7 @@
                             <div class="card-body">
                                 <div class="row justify-content-center align-items-center">
                                     <div class="col-md-6 text-center">
-                                        <h3>Kuisioner </h3>
+                                        <h3>Pertanyaan</h3>
                                     </div>
                                 </div>
                                 <div class="row justify-content-around">

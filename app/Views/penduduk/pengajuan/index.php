@@ -19,7 +19,7 @@
                             <?php
                             if (session()->get('role') == 'front_office'):
                             ?>
-                                <th scope="col">Action</th>
+                                <th scope="col">Aksi</th>
                             <?php
                             endif;
                             ?>

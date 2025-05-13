@@ -15,7 +15,7 @@
                     <div class="tab-content pt-2">
 
                         <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                            <h5 class="card-title">Profile Details</h5>
+                            <h5 class="card-title">Profile Detail</h5>
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
                                     <div class="row">

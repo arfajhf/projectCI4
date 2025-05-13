@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="ps-3">
                                         <h6><?= $submissionData ?></h6>
-                                        <span class="text-muted small pt-2 ps-1">Document</span>
+                                        <span class="text-muted small pt-2 ps-1">Dokumen</span>
 
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                     </div>
                                     <div class="ps-3">
                                         <h6><?= $process ?></h6>
-                                        <span class="text-muted small pt-2 ps-1">Document</span>
+                                        <span class="text-muted small pt-2 ps-1">Dokumen</span>
 
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                     </div>
                                     <div class="ps-3">
                                         <h6><?= $completed ?></h6>
-                                        <span class="text-muted small pt-2 ps-1">Document</span>
+                                        <span class="text-muted small pt-2 ps-1">Dokumen</span>
 
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                                     </div>
                                     <div class="ps-3">
                                         <h6><?= $procesid ?></h6>
-                                        <span class="text-muted small pt-2 ps-1">Document</span>
+                                        <span class="text-muted small pt-2 ps-1">Dokumen</span>
 
                                     </div>
                                 </div>
@@ -169,7 +169,7 @@
                                     </div>
                                     <div class="ps-3">
                                         <h6><?= $completedid ?></h6>
-                                        <span class="text-muted small pt-2 ps-1">Document</span>
+                                        <span class="text-muted small pt-2 ps-1">Dokumen</span>
 
                                     </div>
                                 </div>

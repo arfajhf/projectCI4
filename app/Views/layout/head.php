@@ -79,7 +79,7 @@
                         <li>
                             <a class="dropdown-item d-flex align-items-center" href="/logout" onclick="logout()">
                                 <i class="bi bi-box-arrow-right"></i>
-                                <span>Sign Out</span>
+                                <span>Keluar</span>
                             </a>
                         </li>
 
@@ -167,17 +167,17 @@
                     </li> -->
                         <li>
                             <a href="<?= base_url() ?>penduduk/pengajuan/process">
-                                <i class="bi bi-circle"></i><span>Process</span>
+                                <i class="bi bi-circle"></i><span>Proses</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?= base_url() ?>penduduk/pengajuan/accepte">
-                                <i class="bi bi-circle"></i><span>Accept</span>
+                                <i class="bi bi-circle"></i><span>Konfirmasi</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?= base_url() ?>penduduk/pengajuan/completed">
-                                <i class="bi bi-circle"></i><span>Completed</span>
+                                <i class="bi bi-circle"></i><span>Komplit</span>
                             </a>
                         </li>
                         <li>

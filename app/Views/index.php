@@ -49,16 +49,16 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#home" class="active">Home<br></a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home" class="active">Beranda<br></a></li>
+                    <li><a href="#about">Tentang</a></li>
                     <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="<?= base_url() ?>kuisioner">Kuesioner</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="<?= base_url() ?>kuisioner">Pertanyaan</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted flex-md-shrink-0" href="/login">Log In</a>
+            <a class="btn-getstarted flex-md-shrink-0" href="/login">Masuk</a>
 
         </div>
     </header>
@@ -94,7 +94,7 @@
 
                     <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="content">
-                            <h3>About</h3>
+                            <h3>Tentang</h3>
                             <h2>Disdukcapi Kabupaten Tasikmalaya.</h2>
                             <p>
                                 Dinas Kependudukan dan Pencatatan Sipil (Disdukcapil) Kabupaten Tasikmalaya berkomitmen untuk memberikan pelayanan terbaik bagi masyarakat dalam hal administrasi kependudukan. Kami hadir untuk memudahkan Anda dalam mengurus segala kebutuhan dokumen kependudukan.
@@ -165,8 +165,8 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Contact Us</p>
+                <h2>Kontak</h2>
+                <p>Kontak Kami</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -179,7 +179,7 @@
                             <div class="col-md-6">
                                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                                     <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
+                                    <h3>Alamat</h3>
                                     <!-- <p>Disdukcapil Kabupaten Tasikmalaya</p> -->
                                     <p>Jl. Kami Satu No.03 Dsa. Suka Kamu Kec. Suka Dia Kab. Tasikmalaya Prov. Jawabarat 482767</p>
                                 </div>
@@ -188,7 +188,7 @@
                             <div class="col-md-6">
                                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                                     <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
+                                    <h3>Narahubung</h3>
                                     <p>+62-812-3456-7890</p>
                                     <p>+62-823-4567-8901</p>
                                     <p>+62-834-5678-9012</p>
@@ -198,7 +198,7 @@
                             <div class="col-md-6">
                                 <div class="info-item" data-aos="fade" data-aos-delay="400">
                                     <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
+                                    <h3>Email Kami</h3>
                                     <p>info@example.com</p>
                                     <p>disdukkabtasik@example.com</p>
                                 </div>
@@ -207,7 +207,7 @@
                             <div class="col-md-6">
                                 <div class="info-item" data-aos="fade" data-aos-delay="500">
                                     <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
+                                    <h3>Buka</h3>
                                     <p>Senis - Jumat</p>
                                     <p>09:00 - 17:00</p>
                                 </div>
@@ -234,7 +234,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Pesan" required=""></textarea>
                                 </div>
 
                                 <div class="col-12 text-center">
@@ -242,7 +242,7 @@
                                     <div class="error-message"></div>
                                     <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                                    <button type="submit">Send Message</button>
+                                    <button type="submit">Kirim Pesan</button>
                                 </div>
 
                             </div>
@@ -274,12 +274,12 @@
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>Akses</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#home">Beranda</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#about">Tentang</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="#layanan">Layanan</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#contact">Kontak</a></li>
                     </ul>
                 </div>
 

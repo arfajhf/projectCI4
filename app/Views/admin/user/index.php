@@ -18,7 +18,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">No Telepon</th>
                             <th scope="col">Level</th>
-                            <th scope="col" class="text-center">Action</th>
+                            <th scope="col" class="text-center">Aksi</th>
                         </tr>
                     </thead>
 

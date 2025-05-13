@@ -32,11 +32,11 @@
                         </select>
                     </div>
                     <div class="col-12">
-                        <label class="form-label">Requirements</label>
+                        <label class="form-label">Persyaratan</label>
                         <div id="requirements-list"></div>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Tambah</button>
                         <a type="reset" href="<?php base_url() ?>/dashboard" class="btn btn-secondary">Kembali</a>
                     </div>
                 </form><!-- Vertical Form -->

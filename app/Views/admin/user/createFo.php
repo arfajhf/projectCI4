@@ -25,7 +25,7 @@
                 <input type="email" class="form-control" id="inputEmail4" name="email">
             </div>
             <div class="col-12">
-                <label for="inputPassword4" class="form-label">Password</label>
+                <label for="inputPassword4" class="form-label">Kata Sandi</label>
                 <input type="password" class="form-control" id="inputPassword4" name="password">
             </div>
             <div class="col-12">
@@ -33,7 +33,7 @@
                 <input type="text" class="form-control" id="inputAddress" name="no_hp">
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Tambah</button>
                 <a type="reset" href="/admin" class="btn btn-secondary">Kembali</a>
             </div>
         </form><!-- Vertical Form -->

@@ -16,7 +16,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Email</th>
                             <th scope="col">No Telepon</th>
-                            <th scope="col" class="text-center">Action</th>
+                            <th scope="col" class="text-center">Aksi</th>
                             <!-- <th scope="col">Action</th> -->
                         </tr>
                     </thead>
