@@ -183,6 +183,8 @@
 
         <?php if (session()->get('role') == 'admin'): ?>
             <canvas id="clusterChart"></canvas>
+            <span><strong>Keterangan</strong></span>
+            <span>1 : kurang Setuju, 2 : Cukup, 3 : Setuju, 4 : Sangat Setuju</span>
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
